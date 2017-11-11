@@ -1,15 +1,14 @@
 var moveDecision = require('./MoveDecision.js')
-var gameBuilder = require('./GameBuilder.js')
+var game = require('./Game.js')
 
 module.exports = {
 
-    gameArray: null,
-
     calculateMoveResponse: function (data) {
-        gameArray = gameBuilder.createGameArray(data)
+        
+        game.initializeGame(data)
 
         var response = {
-            move: moveDecision.getNextMove(data, gameArray),
+            move: moveDecision.getNextMove(game),
             taunt: "Moving...." // optional, but encouraged!
         }
         return response;
