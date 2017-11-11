@@ -20,7 +20,7 @@ module.exports = {
         
         this.myHealth = mySnake.health_points
 
-        this.setNearestFood()
+        this.setNearestFood(data.food)
     },
 
     getMySnake: function(data) {
@@ -37,8 +37,8 @@ module.exports = {
         return mySnake
     },
 
-    setNearestFood: function() {
+    setNearestFood: function(food) {
 
-        
+        this.nearestFood = food[0]
     }
 }
