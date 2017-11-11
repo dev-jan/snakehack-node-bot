@@ -1,6 +1,6 @@
 module.exports = {
 
-    getNextMove: function(data, gameArray) {
+    getNextMove: function(game) {
         // possible moves: up, down, left, right
 
         // TODO: better...
