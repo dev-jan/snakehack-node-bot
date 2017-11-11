@@ -10,6 +10,7 @@ module.exports = {
             move: moveDecision.getNextMove(game),
             taunt: "Moving...." // optional, but encouraged!
         }
+        console.log("Next Move: " + response.move)
         return response;
     }
 }
