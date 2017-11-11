@@ -1,14 +1,19 @@
 var moveDecision = require('./MoveDecision.js')
 var game = require('./Game.js')
+var messageGenerator = require('./MessageGenerator.js')
 
 module.exports = {
 
+    lastMessage: "I'm a bee",
     calculateMoveResponse: function (data) {
         game.initializeGame(data)
 
+        if (data.turn % 5 == 0) {
+            lastMessage = messageGenerator.getRandomMessage()
+        }
         var response = {
             move: moveDecision.getNextMove(game),
-            taunt: "Moving...." // optional, but encouraged!
+            taunt: lastMessage
         }
         console.log("Next Move: " + response.move)
         return response;
