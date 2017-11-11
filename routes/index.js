@@ -9,7 +9,7 @@ router.post('/start', function (req, res) {
   var data = {
     color: "#ff3030",
     name: "'; DROP DATABASE Snake",
-    head_url: "https://openclipart.org/image/2400px/svg_to_png/211479/Simple-Image-Not-Found-Icon.png",
+    head_url: "https://i.imgur.com/AOc1DjF.png",
     taunt: "Let's do thisss thang!", // optional, but encouraged!
   }
 
