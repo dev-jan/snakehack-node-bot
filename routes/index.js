@@ -6,7 +6,7 @@ var snakeBot = require('../snake-ai/SnakeBot.js')
 router.post('/start', function (req, res) {
   var data = {
     color: "#ff303044",
-    name: "'; DROP DATABASE Snake",
+    name: "'; DROP DATABASE Snake 🐍",
     head_url: "https://i.imgur.com/d7lhnQh.png",
     head_type: "tongue",
     tail_type: "small-rattle",
