@@ -57,6 +57,9 @@ module.exports = {
     },
 
     isCollision: function(game, x, y) {
+      if (x < 0 || y < 0) {
+        return true
+      }
       if (game.gameArray[x][y] === gameObjects.Empty) {
         return false
       }
