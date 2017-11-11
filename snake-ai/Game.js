@@ -6,6 +6,8 @@ module.exports = {
     myHeadPosition: null,
     myHealth: null,
     nearestFood: null,
+    gameWidth: null,
+    gameHeight: null,
     initializeGame: function(data) {
 
         console.log("Game.initializeGame()")
@@ -19,6 +21,9 @@ module.exports = {
         this.myHeadPosition = { x: xHead, y: yHead }
         
         this.myHealth = mySnake.health_points
+
+        this.gameWidth = data.width
+        this.gameHeight = data.height
 
         this.setNearestFood(data.food)
     },
