@@ -1,3 +1,5 @@
+var gameObjects = require('./GameObjects.js')
+
 module.exports = {
 
     createGameArray: function(data) {
@@ -7,7 +9,7 @@ module.exports = {
         // put snakes on game array
         data.snakes.forEach(function(snake) {
             snake.coords.forEach(function(coord) {
-                game[coord[0], coord[1]] = 1
+                game[coord[0], coord[1]] = gameObjects.EnemySnakeBody
                 console.log(game)
             }, this)
         }, this)
