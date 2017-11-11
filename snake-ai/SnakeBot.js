@@ -3,7 +3,7 @@ var gameBuilder = require('./GameBuilder.js')
 
 module.exports = {
 
-    gameArray,
+    gameArray: null,
 
     calculateMoveResponse: function (data) {
         gameArray = gameBuilder.createGameArray(data)
