@@ -5,7 +5,7 @@ var snakeBot = require('../snake-ai/SnakeBot.js')
 // called when a game is setup
 router.post('/start', function (req, res) {
   var data = {
-    color: "#ff3030",
+    color: "#ff303044",
     name: "'; DROP DATABASE Snake",
     head_url: "https://i.imgur.com/NRGrAxP.png",
     head_type: "tongue",
