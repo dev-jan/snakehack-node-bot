@@ -60,6 +60,9 @@ module.exports = {
       if (x < 0 || y < 0) {
         return true
       }
+      if (x > game.gameWidth || y > game.gameHeight) {
+        return true
+      }
       if (game.gameArray[x][y] === gameObjects.Empty) {
         return false
       }
