@@ -54,6 +54,7 @@ app.use(function (err, req, res, next) {
 // 500 handler middleware, respond with JSON only
 app.use(function (err, req, res, next) {
   var statusCode = err.status || 500
+  console.error(err.stack);
 
   res.status(statusCode)
   res.send({
