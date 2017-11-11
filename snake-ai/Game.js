@@ -44,7 +44,7 @@ module.exports = {
 
         food.forEach(function(f) {
             var distance = this.calcDistance(f)
-            if (distance < nearest) {
+            if (distance < shortestDistance) {
                 shortestDistance = distance
                 targetFood = f
             }
