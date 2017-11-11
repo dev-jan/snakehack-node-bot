@@ -1,11 +1,8 @@
 var express = require('express')
 var router  = express.Router()
 
-// Handle POST request to '/start'
+// called when a game is setup
 router.post('/start', function (req, res) {
-  // NOTE: Do something here to start the game
-
-  // Response data
   var data = {
     color: "#ff3030",
     name: "'; DROP DATABASE Snake",
@@ -14,18 +11,16 @@ router.post('/start', function (req, res) {
     tail_type: "small-rattle",
     taunt: "Something..."
   }
-
   return res.json(data)
 })
 
-// Handle POST request to '/move'
+// called on every move
 router.post('/move', function (req, res) {
-  // NOTE: Do something here to generate your move
+  console.log(req.body)
 
-  // Response data
   var data = {
     move: 'down', // one of: ['up','down','left','right']
-    taunt: 'Outta my way, snake!', // optional, but encouraged!
+    taunt: "Moving...." // optional, but encouraged!
   }
 
   return res.json(data)
