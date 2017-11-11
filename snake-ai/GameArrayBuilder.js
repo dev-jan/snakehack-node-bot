@@ -10,9 +10,17 @@ module.exports = {
 
         var myId = data.you
 
-        // put snakes on game array
-        data.snakes.forEach(function(snake) {
+        addSnakes(data)
+        addFood(data)
 
+        return gameArray
+    },
+
+    // put snakes on game array
+    addSnakes: function(data) {
+        
+        data.snakes.forEach(function(snake) {
+            
             var isHead = true; // todo: make sure this is the head.. maybe it's the tail
             snake.coords.forEach(function(coord) {
 
@@ -25,13 +33,18 @@ module.exports = {
                     }
                 } else if (snake.id == myId) {
                     objectToPlace = gameObjects.PlayerSankeBody
-                }
-                
+                }                
                 gameArray[coord[0]][coord[1]] = objectToPlace
             }, this)
         }, this)
+    },
 
-        return gameArray
+    // put foods on game array
+    addFood: function(data) {
+
+        data.food.forEach(function(f) {
+            gameArray[f[0]][f[1]] = gameObjects.Food
+        }, this)
     },
 
     // Copy pasta from Stackoverflow. Creates 2 dimensional array
