@@ -5,9 +5,11 @@ var defaultMove = require('./DefaultMove.js')
 module.exports = {
 
     getNextMove: function(game) {
-        // possible moves: up, down, left, right
+        var nextMove = "up"; // up is the default move (if the server not respond)
 
-        // TODO: better...
-        return 'down'
+        console.log(game)
+        nextMove = food.getNextMove(game)
+
+        return nextMove
     }
 }

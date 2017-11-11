@@ -4,7 +4,6 @@ var game = require('./Game.js')
 module.exports = {
 
     calculateMoveResponse: function (data) {
-        
         game.initializeGame(data)
 
         var response = {
