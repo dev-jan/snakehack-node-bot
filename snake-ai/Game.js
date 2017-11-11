@@ -10,17 +10,17 @@ module.exports = {
 
         console.log("Game.initializeGame()")
 
-        gameArray = gameBuilder.createGameArray(data)
+        this.gameArray = gameBuilder.createGameArray(data)
 
         var mySnake = this.getMySnake(data)
 
         var xHead = mySnake.coords[0][0]
         var yHead = mySnake.coords[0][1]
-        myHeadPosition = { x: xHead, y: yHead }
+        this.myHeadPosition = { x: xHead, y: yHead }
         
-        myHealth = mySnake.health_points
+        this.myHealth = mySnake.health_points
 
-        nearestFood = {x: 1, y: 1 }
+        this.setNearestFood()
     },
 
     getMySnake: function(data) {
@@ -35,5 +35,10 @@ module.exports = {
         }, this)
 
         return mySnake
+    },
+
+    setNearestFood: function() {
+
+        
     }
 }
