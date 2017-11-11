@@ -39,6 +39,22 @@ module.exports = {
 
     setNearestFood: function(food) {
 
-        this.nearestFood = food[0]
+        var shortestDistance = this.calcDistance(food[0])
+        var targetFood = food[0]
+
+        food.forEach(function(f) {
+            var distance = this.calcDistance(f)
+            if (distance < nearest) {
+                shortestDistance = distance
+                targetFood = f
+            }
+        }, this)
+        
+        this.nearestFood = { x: targetFood[0], y: targetFood[1] }
+    },
+
+    calcDistance: function(food) {
+
+        return Math.abs(this.myHeadPosition.x - food[0]) + Math.abs(this.myHeadPosition.y - food[1])
     }
 }
