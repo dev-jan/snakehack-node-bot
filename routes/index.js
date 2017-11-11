@@ -10,7 +10,7 @@ router.post('/start', function (req, res) {
     head_url: "https://i.imgur.com/d7lhnQh.png",
     head_type: "tongue",
     tail_type: "small-rattle",
-    taunt: "Something..."
+    taunt: "Something's sneeky... 🤡🙏👵"
   }
   return res.json(data)
 })

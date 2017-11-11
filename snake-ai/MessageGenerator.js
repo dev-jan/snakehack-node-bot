@@ -9,11 +9,11 @@ module.exports = {
             "Never don't give up!",
             "🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍",
             "; DROP DATABASE",
-            "Snake, we have a problem!",
+            "Snake, we have a problem! 👨‍🚀",
             "Why are we still here, just to suffer... 😥",
             "HELP ME! OMG WTF!!! 😱😱",
             "beeep boop 📡",
-            "Target aquired..",
+            "Target aquired.. ☠️",
             "🍕 P I Z Z A 🍕"
         ]
 
