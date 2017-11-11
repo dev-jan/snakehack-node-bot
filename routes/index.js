@@ -1,5 +1,6 @@
 var express = require('express')
 var router  = express.Router()
+var snakeBot = require('../snake-ai/SnakeBot.js')
 
 // called when a game is setup
 router.post('/start', function (req, res) {
@@ -18,12 +19,9 @@ router.post('/start', function (req, res) {
 router.post('/move', function (req, res) {
   console.log(req.body)
 
-  var data = {
-    move: 'down', // one of: ['up','down','left','right']
-    taunt: "Moving...." // optional, but encouraged!
-  }
+  var response = snakeBot.getNextMove(req.body)
 
-  return res.json(data)
+  return res.json(response)
 })
 
 module.exports = router
