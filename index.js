@@ -1,7 +1,3 @@
-/**
- * NOTE: Don't worry about editing this file!
- * Where you want to focus is adding your AI to the endpoints in routes/index.js.
- */
 
 var bodyParser = require('body-parser')
 var express = require('express')

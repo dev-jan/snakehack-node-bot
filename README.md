@@ -1,4 +1,4 @@
-# snakehack-node
+# ';DROP DATABASE snake bot
 
 Snakehack bot by Marco and Jan :)
 

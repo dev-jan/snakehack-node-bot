@@ -1,7 +1,7 @@
 {
-  "name": "snakehack-node",
+  "name": "dropdatabase-snake-bot",
   "description": "Snakehack bot by Marco and Jan",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "private": true,
   "author": "Marco and Jan",
   "repository": "https://github.com/eddex/snakehack-node",
