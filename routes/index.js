@@ -19,7 +19,7 @@ router.post('/start', function (req, res) {
 router.post('/move', function (req, res) {
   console.log(req.body)
 
-  var response = snakeBot.getNextMove(req.body)
+  var response = snakeBot.calculateMoveResponse(req.body)
 
   return res.json(response)
 })

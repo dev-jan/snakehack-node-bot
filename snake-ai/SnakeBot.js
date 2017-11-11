@@ -1,18 +1,15 @@
-var occupied = require('./OccupiedFields.js')
+var moveDecision = require('./MoveDecision.js')
 var gameBuilder = require('./GameBuilder.js')
 
 module.exports = {
 
     gameArray,
 
-    getNextMove: function (data) {
-
+    calculateMoveResponse: function (data) {
         gameArray = gameBuilder.createGameArray(data)
 
-        occupied.getOccupiedFields(data)
-
         var response = {
-            move: 'down', // one of: ['up','down','left','right']
+            move: moveDecision.getNextMove(data, gameArray),
             taunt: "Moving...." // optional, but encouraged!
         }
         return response;
