@@ -10,7 +10,9 @@ router.post('/start', function (req, res) {
     color: "#ff3030",
     name: "'; DROP DATABASE Snake",
     head_url: "https://i.imgur.com/AOc1DjF.png",
-    taunt: "Let's do thisss thang!", // optional, but encouraged!
+    head_type: "tongue",
+    tail_type: "small-rattle",
+    taunt: "Something..."
   }
 
   return res.json(data)
