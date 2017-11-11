@@ -7,7 +7,7 @@ router.post('/start', function (req, res) {
   var data = {
     color: "#ff3030",
     name: "'; DROP DATABASE Snake",
-    head_url: "https://i.imgur.com/AOc1DjF.png",
+    head_url: "https://i.imgur.com/NRGrAxP.png",
     head_type: "tongue",
     tail_type: "small-rattle",
     taunt: "Something..."
