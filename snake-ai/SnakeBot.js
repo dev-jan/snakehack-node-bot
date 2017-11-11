@@ -1,4 +1,4 @@
-var moveDecision = require('./MoveDecision.js')
+var pathfinder = require('./Pathfinder.js')
 var game = require('./Game.js')
 var messageGenerator = require('./MessageGenerator.js')
 
@@ -12,7 +12,7 @@ module.exports = {
             lastMessage = messageGenerator.getRandomMessage()
         }
         var response = {
-            move: moveDecision.getNextMove(game),
+            move: pathfinder.getNextMove(game),
             taunt: lastMessage
         }
         console.log("Next Move: " + response.move)

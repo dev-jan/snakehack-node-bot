@@ -1,4 +1,4 @@
-var gameObjects = require('./GameObjects.js')
+var gameFieldConstants = require('./GameFieldConstants.js')
 
 module.exports = {
     exitStategy: 'right',
@@ -96,7 +96,7 @@ module.exports = {
       if (x >= game.gameWidth || y >= game.gameHeight) {
         return false
       }
-      if (game.gameArray[x][y] === gameObjects.Empty || game.gameArray[x][y] === gameObjects.Food) {
+      if (game.gameArray[x][y] === gameFieldConstants.Empty || game.gameArray[x][y] === gameFieldConstants.Food) {
         return false
       }
       return true

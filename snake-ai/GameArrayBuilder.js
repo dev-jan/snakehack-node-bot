@@ -1,4 +1,4 @@
-var gameObjects = require('./GameObjects.js')
+var gameFieldConstants = require('./GameFieldConstants.js')
 
 module.exports = {
 
@@ -20,27 +20,27 @@ module.exports = {
 
     // put snakes on game array
     addSnakes: function(data) {
-        
+
         console.log("GameArrayBuilder.addSnakes()")
 
         var myId = data.you
 
         data.snakes.forEach(function(snake) {
-            
+
             var isHead = true; // todo: make sure this is the head.. maybe it's the tail
             snake.coords.forEach(function(coord) {
 
-                var objectToPlace = gameObjects.EnemySnakeBody
+                var objectToPlace = gameFieldConstants.EnemySnakeBody
                 if (isHead) {
                     if (snake.id == myId) {
-                        objectToPlace = gameObjects.PlayerSnakeHead
+                        objectToPlace = gameFieldConstants.PlayerSnakeHead
                     } else {
-                        objectToPlace = gameObjects.EnemySnakeHead
+                        objectToPlace = gameFieldConstants.EnemySnakeHead
                     }
                 } else if (snake.id == myId) {
-                    objectToPlace = gameObjects.PlayerSankeBody
+                    objectToPlace = gameFieldConstants.PlayerSankeBody
                 }
-                isHead = false;             
+                isHead = false;
                 gameArray[coord[0]][coord[1]] = objectToPlace
             }, this)
         }, this)
@@ -52,7 +52,7 @@ module.exports = {
         console.log("GameArrayBuilder.addFood()")
 
         data.food.forEach(function(f) {
-            gameArray[f[0]][f[1]] = gameObjects.Food
+            gameArray[f[0]][f[1]] = gameFieldConstants.Food
         }, this)
     },
 
