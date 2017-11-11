@@ -1,10 +1,10 @@
 {
   "name": "snakehack-node",
-  "description": "A simple SankeHack AI written in Javascript for NodeJS",
-  "version": "0.0.0",
+  "description": "Snakehack bot by Marco and Jan",
+  "version": "0.0.5",
   "private": true,
-  "author": "stair-ch",
-  "repository": "https://github.com/stair-ch/snakehack-node",
+  "author": "Marco and Jan",
+  "repository": "https://github.com/eddex/snakehack-node",
   "dependencies": {
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
