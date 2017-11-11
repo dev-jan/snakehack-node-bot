@@ -39,7 +39,8 @@ module.exports = {
                     }
                 } else if (snake.id == myId) {
                     objectToPlace = gameObjects.PlayerSankeBody
-                }                
+                }
+                isHead = false;             
                 gameArray[coord[0]][coord[1]] = objectToPlace
             }, this)
         }, this)
