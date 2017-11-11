@@ -29,7 +29,7 @@ module.exports = {
 
     fallbackIfNeeded: function (game, positionX, positionY, direction, recursionCounter) {
       console.log("try " + direction)
-        if (recursionCounter > 20) {
+        if (recursionCounter >= 6) {
           console.log("recursion overflow, use exit strategy " + this.exitStategy)
           return this.exitStategy
         }
