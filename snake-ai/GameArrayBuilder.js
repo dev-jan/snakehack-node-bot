@@ -2,16 +2,18 @@ var gameObjects = require('./GameObjects.js')
 
 module.exports = {
 
+    gameArray: null,
+
     createGameArray: function(data) {
 
-        console.log("GameBuilder.createGameArray()")
+        console.log("GameArrayBuilder.createGameArray()")
 
-        var gameArray = createArray(data.width, data.height)
+        gameArray = this.createArray(data.width, data.height)
 
-        var myId = data.you
+        console.log(data)
 
-        addSnakes(data)
-        addFood(data)
+        this.addSnakes(data)
+        this.addFood(data)
 
         return gameArray
     },
@@ -19,6 +21,10 @@ module.exports = {
     // put snakes on game array
     addSnakes: function(data) {
         
+        console.log("GameArrayBuilder.addSnakes()")
+
+        var myId = data.you
+
         data.snakes.forEach(function(snake) {
             
             var isHead = true; // todo: make sure this is the head.. maybe it's the tail
@@ -42,21 +48,26 @@ module.exports = {
     // put foods on game array
     addFood: function(data) {
 
+        console.log("GameArrayBuilder.addFood()")
+
         data.food.forEach(function(f) {
             gameArray[f[0]][f[1]] = gameObjects.Food
         }, this)
     },
 
     // Copy pasta from Stackoverflow. Creates 2 dimensional array
-    createArray: function(length) {
-        var arr = new Array(length || 0),
-            i = length;
+    createArray: function(width, height) {
 
-        if (arguments.length > 1) {
-            var args = Array.prototype.slice.call(arguments, 1);
-            while(i--) arr[length-1 - i] = createArray.apply(this, args);
+        console.log("GameArrayBuilder.createArray()")
+
+        var xArray = []
+        for (x = 0; x < width; x++) {
+            var yArray = []
+            for (y = 0; y < height; y++) {
+                yArray[y] = 0
+            }
+            xArray[x] = yArray
         }
-
-        return arr;
+        return xArray
     }
 }

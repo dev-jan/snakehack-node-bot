@@ -12,8 +12,8 @@ module.exports = {
 
         gameArray = gameBuilder.createGameArray(data)
 
-        var mySnake = getMySnake(data)
-        
+        var mySnake = this.getMySnake(data)
+
         var xHead = mySnake.coords[0][0]
         var yHead = mySnake.coords[0][1]
         myHeadPosition = { x: xHead, y: yHead }
